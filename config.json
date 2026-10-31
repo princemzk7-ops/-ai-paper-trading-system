@@ -1,10 +1,13 @@
+
 {
-  "crypto_symbols": ["BTC/USDT:USDT", "ETH/USDT:USDT", "SOL/USDT:USDT", "XRP/USDT:USDT"],
-  "stock_symbols": ["AAPL", "MSFT", "NVDA", "AMZN", "TSLA"],
-  "timeframe": "15m",
-  "stock_period": "5d",
-  "stock_interval": "15m",
-  "paper_balance_usdt": 100000,
+  "crypto_symbols": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "XRP/USDT:USDT"
+  ],
+  "timeframe": "5m",
+  "paper_balance_usdt": 100,
   "risk_pct": 0.005,
   "max_symbols": 20,
   "rsi_period": 14,
