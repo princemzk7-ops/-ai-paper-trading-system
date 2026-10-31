@@ -21,12 +21,12 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
+          python-version: "3.11".   
       - name: Install Libraries
         run: |
           python -m pip install --upgrade pip
-          pip install ccxt requests numpy pandas
+          pip install ccxt yfinance requests numpy pandas
+
 
       - name: Run Paper Bot
         run: python paper_bot.py
