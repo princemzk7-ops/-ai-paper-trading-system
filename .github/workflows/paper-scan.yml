@@ -34,4 +34,4 @@ jobs:
 
       - name: Start Paper Trading Bot
         run: |
-          python paper_bot.py
+          python paper_bot.py 
