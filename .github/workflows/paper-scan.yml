@@ -9,17 +9,13 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: bybit-paper-bot
-  cancel-in-progress: false
-
 jobs:
   paper-trading:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
-      - name: Get Bot Files
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -30,8 +26,7 @@ jobs:
       - name: Install Libraries
         run: |
           python -m pip install --upgrade pip
-          pip install requests numpy pandas
+          pip install ccxt requests numpy pandas
 
-      - name: Start Paper Trading Bot
-        run: |
-          python paper_bot.py 
+      - name: Run Paper Bot
+        run: python paper_bot.py
