@@ -28,5 +28,5 @@ jobs:
           pip install ccxt yfinance requests numpy pandas
 
 
-      - name: Run Paper Bot
-        run: python paper_bot.py
+            - name: Test Bybit Testnet
+        run: python test_bybit.py
