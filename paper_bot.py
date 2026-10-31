@@ -14,7 +14,11 @@ with open(os.path.join(ROOT, "config.json"), encoding="utf-8") as f:
 
 exchange = ccxt.bybit({
     "enableRateLimit": True,
-    "options": {"defaultType": "swap"}
+    "timeout": 30000,
+    "options": {
+        "defaultType": "swap",
+        "defaultSubType": "linear"
+    }
 })
 
 TIMEFRAME = CFG.get("timeframe", "5m")
