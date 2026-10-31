@@ -1,0 +1,17 @@
+
+import requests
+
+url = "https://api-testnet.bybit.com/v5/market/instruments-info"
+
+try:
+    response = requests.get(
+        url,
+        params={"category": "linear", "symbol": "BTCUSDT"},
+        timeout=20
+    )
+
+    print("HTTP STATUS:", response.status_code)
+    print("BYBIT RESPONSE:", response.text[:1500])
+
+except Exception as e:
+    print("CONNECTION ERROR:", str(e))
